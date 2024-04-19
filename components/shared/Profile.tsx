@@ -169,7 +169,9 @@ const SkeletonFive = () => {
         variants={variantsSecond}
         className="flex flex-row rounded-full border border-white/[0.2] p-2 items-center justify-end space-x-2 w-3/4 ml-auto bg-black"
       >
-        <p className="text-xs text-neutral-100">Don't Worry , I Got You !</p>
+        <p className="text-xs text-neutral-100">
+          Don&apos;t Worry , I Got You !
+        </p>
         <UserCircle2Icon />
       </motion.div>
     </motion.div>
@@ -229,7 +231,7 @@ const items = [
   {
     title: "Reach Me",
     description: (
-      <span className="text-sm">Connect To Me And Let's Get To Work!</span>
+      <span className="text-sm">Connect To Me And Let&apos;s Get To Work!</span>
     ),
     header: <SkeletonFive />,
     className: "md:col-span-1",

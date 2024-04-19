@@ -71,7 +71,7 @@ const Header = () => {
         </div>
         <Link href={"/"}>
           <p className="text-3xl font-bold tracking-wider">
-            Ishak's Portfolio{" "}
+            Ishak&apos;s Portfolio{" "}
           </p>
         </Link>
         <div className="flex justify-center items-center gap-5">
@@ -109,7 +109,7 @@ const Header = () => {
       >
         <Link href={"/"}>
           <p className="text-3xl max-sm:text-xl font-bold tracking-wider">
-            Ishak's Portfolio{" "}
+            Ishak&apos;s Portfolio{" "}
           </p>
         </Link>
         <div className="">
@@ -120,7 +120,7 @@ const Header = () => {
             <SheetContent className="backdrop-blur-sm text-center">
               <div className="text-center mb-10">
                 <Link href={"/"} className="text-2xl font-bold">
-                  Ishak's Portfolio
+                  Ishak&apos;s Portfolio
                 </Link>
               </div>
 
