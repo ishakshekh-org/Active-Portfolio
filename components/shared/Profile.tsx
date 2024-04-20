@@ -13,10 +13,17 @@ import {
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { Skills } from "../ui/skills";
-import InfiniteCards from "../ui/InfiniteCards";
 import Link from "next/link";
 import { ArrowUpRight, User2Icon, UserCircle2Icon } from "lucide-react";
 import { AnimeButton } from "./AnimeButton";
+import Marquee from "react-fast-marquee";
+
+const images = [
+  "/images/JurnL.webp",
+  "/images/reyben-shery.png",
+  "/images/shopscrape.png",
+  "/images/sushi.png",
+];
 
 export function Bento() {
   return (
@@ -86,26 +93,29 @@ const SkeletonThree = () => {
         </Link>
       </div>
       <div className="magicpattern"></div>
-      <marquee direction="left">
-        <p className="bg-white/10 w-64 text-center px-2 py-1 rounded-full backdrop-blur-sm">
-          Full Stack Web Development
-        </p>
-      </marquee>
-      <marquee direction="right">
-        <p className="bg-white/10 w-52 text-center px-2 py-1 rounded-full backdrop-blur-sm">
-          Front End Develoment
-        </p>
-      </marquee>
-      <marquee direction="left">
-        <p className="bg-white/10 w-28 text-center px-2 py-1 rounded-full backdrop-blur-sm">
-          UI Design
-        </p>
-      </marquee>
-      <marquee direction="right">
-        <p className="bg-white/10 w-32 text-center px-2 py-1 rounded-full backdrop-blur-sm">
-          Animations
-        </p>
-      </marquee>
+
+      <div className="flex flex-col gap-5">
+        <Marquee speed={19}>
+          <p className="bg-white/10 w-64 text-center px-3 mx-5  py-1 rounded-full backdrop-blur-sm">
+            Full Stack Web Development
+          </p>
+        </Marquee>
+        <Marquee speed={15} direction="right">
+          <p className="bg-white/10 w-52 text-center px-3 mx-5  py-1 rounded-full backdrop-blur-sm">
+            Front End Develoment
+          </p>
+        </Marquee>
+        <Marquee speed={25}>
+          <p className="bg-white/10 w-28 text-center px-3 py-1 rounded-full backdrop-blur-sm">
+            UI Design
+          </p>
+        </Marquee>
+        <Marquee speed={16} direction="right">
+          <p className="bg-white/10 w-32 text-center px-3 mx-5 py-1 rounded-full backdrop-blur-sm">
+            Animations
+          </p>
+        </Marquee>
+      </div>
     </div>
   );
 };
@@ -120,7 +130,19 @@ const SkeletonFour = () => {
           <AnimeButton cont="Explore Projects" icon={<IconArrowUpRight />} />
         </Link>
       </div>
-      <InfiniteCards />
+
+      <Marquee className=" h-52 flex">
+        {images.map((image, index) => (
+          <Image
+            src={image}
+            alt="image"
+            key={index}
+            width={240}
+            height={240}
+            className="mx-3 rounded-xl "
+          />
+        ))}
+      </Marquee>
     </div>
   );
 };
