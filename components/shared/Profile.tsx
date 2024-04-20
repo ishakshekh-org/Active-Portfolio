@@ -61,7 +61,7 @@ const SkeletonOne = () => {
         </Link>
       </div>
       <div>
-        <div className="flex items-center justify-center">
+        <div className="flex items-center justify-center rotationalImage">
           <Image
             src={"/images/ishak.jpg"}
             width={150}

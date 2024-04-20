@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const page = () => {
   return (
-    <div className="mb-14 mt-2 sm:mt-5 lg:mt-14">
+    <div className="mb-14">
       <Bento />
     </div>
   );

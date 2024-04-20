@@ -22,23 +22,7 @@ import { AnimeButton } from "./AnimeButton";
 const Header = () => {
   return (
     <>
-      <motion.div
-        initial={{ opacity: 0, top: -100, width: "0" }}
-        animate={{
-          opacity: 1,
-          top: 0,
-          position: "fixed",
-          width: "100%",
-          left: "50%",
-          translateX: "-50%",
-          translateY: "0",
-        }}
-        transition={{
-          delay: 0.5,
-          duration: 0.5,
-        }}
-        className="max-lg:hidden max-w-6xl mx-auto z-50  flex justify-between items-center py-10 bg-transparent backdrop-blur-sm"
-      >
+      <div className="max-lg:hidden max-w-6xl mx-auto z-50 fixed top-0 left-0 right-0   flex justify-between items-center py-5 bg-transparent backdrop-blur-sm">
         <div className="flex justify-center items-center gap-5">
           <Link
             href={"https://www.youtube.com/channel/UCBawpRpmUwtTWl7SexkcxBA"}
@@ -88,25 +72,9 @@ const Header = () => {
             <Contact2 />
           </Link>
         </div>
-      </motion.div>
+      </div>
 
-      <motion.div
-        initial={{ opacity: 0, y: -100 }}
-        animate={{
-          opacity: 1,
-          y: 0,
-          position: "fixed",
-          width: "100%",
-          top: "0",
-          left: "0",
-          right: "0",
-        }}
-        transition={{
-          delay: 0.5,
-          duration: 0.5,
-        }}
-        className="lg:hidden z-50 flex justify-between items-center px-6 py-2 bg-transparent backdrop-blur-sm"
-      >
+      <div className="lg:hidden  z-50 fixed top-0 left-1/2 -translate-x-1/2 translate-y-0  w-[80%]   flex justify-between items-center px-2  py-2 bg-transparent backdrop-blur-sm">
         <Link href={"/"}>
           <p className="text-3xl max-sm:text-xl font-bold tracking-wider">
             Ishak&apos;s Portfolio{" "}
@@ -200,7 +168,7 @@ const Header = () => {
             </SheetContent>
           </Sheet>
         </div>
-      </motion.div>
+      </div>
     </>
   );
 };
